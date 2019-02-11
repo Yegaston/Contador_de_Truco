@@ -1,0 +1,93 @@
+/* 
+Pallet Color:
+Primary: #007700 - White Text
+Light: #49a738 - Black text
+Dark: #004a00 - White Test
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: #007700;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#ingreso {
+    
+}
+
+header {
+    background-color: #49a738; 
+    color: white;
+    text-align: center;
+    padding: 5vw;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+.col-1 {
+    flex-grow: 1;
+    display: block;
+}
+
+.content-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.list-inline {
+    padding-left: 0;
+    margin-left: -5px;
+    list-style: none;
+  }
+
+.input {
+    width: 85vw;
+    height: 5vh;
+    border: solid;
+    border-color: #004a00;
+    margin: 5vh;
+    color: white;
+    font-size: 3vh;
+    text-align: center;
+    /* font-size: 3vh; */
+}
+
+.input::placeholder {
+    color: white;
+    font-size: 3vh;
+    text-align: center;
+}
+
+.btn {
+    border: solid;
+    border-color: #004a00;
+    margin: 5vh;
+    color: white;
+    font-size: 3vh;
+    text-align: center;
+}
+.btn-select {
+    border: solid;
+    border-color: gold;
+    margin: 5vh;
+    color: white;
+    font-size: 3vh;
+    text-align: center;
+}
+
+.btn-a {
+    justify-content: center;
+    height: 5vh;
+    width: 20vw;
+    float: left;
+}
+
+.btn-cont {
+    height: 5vh;
+    width: 85vw;
+}

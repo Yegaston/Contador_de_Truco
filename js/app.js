@@ -68,7 +68,7 @@ $(document).ready(function () {
     function printFosforos(p,e) {
         console.log(p)
         for (var i = 1; i <= 6; i++) {
-            if (p > 0) {
+            if (p >= 0) {
                 if (p >= 5) {
                     $(`#e${e}${i}`).attr('src', './resources/5.png');
                     p = p - 5;
@@ -89,15 +89,36 @@ $(document).ready(function () {
             alert("Sucedio un error, (Estas tratando de sumar de mas.).");
         }
     });
+    $('#remainsE1').click(function (e) {
+        e.preventDefault();
+        p1--
+        if (p1 >= 0 && p1 <= cantP) {
+            printFosforos(p1, 1);
+        } else {
+            alert("Sucedio un error, (Estas tratando restar de mas.).");
+        }
+    });
 
     $('#addE2').click(function (e) {
         e.preventDefault();
         p2++
-        if (p1 > 0 && p1 <= cantP) {
+        if (p2 > 0 && p2 <= cantP) {
             printFosforos(p2, 2);
         } else {
             alert("Sucedio un error, (Estas tratando de sumar de mas.).");
         }
     });
+
+    $('#remainsE2').click(function (e) {
+        e.preventDefault();
+        p2--
+        if (p2 > 0 && p2 <= cantP) {
+            printFosforos(p2, 2);
+        } else {
+            alert("Sucedio un error, (Estas tratando de sumar de mas.).");
+        }
+    });
+
+   
 
 });

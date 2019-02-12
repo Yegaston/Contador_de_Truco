@@ -91,3 +91,21 @@ header {
     height: 5vh;
     width: 85vw;
 }
+
+.img-fosforos {
+    height: 10vh;
+    width: 20vw;
+    margin: 1vh;
+}
+
+
+/* IMPORTANTE */
+.visible{
+    display: block;
+    visibility: visible;
+}
+
+.oculto {
+    display: none;
+    visibility: hidden;
+}

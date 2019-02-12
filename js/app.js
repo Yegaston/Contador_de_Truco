@@ -8,6 +8,7 @@ var cantP = 0;
 
 
 $(document).ready(function () {
+
     $('#a30').click(function (e) {
         e.preventDefault();
         $('#a30').removeClass('btn');
@@ -41,10 +42,22 @@ $(document).ready(function () {
             console.log(eq1)
             console.log(eq2)
             console.log(cantP)
+
+
+            $('#ingreso').removeClass('visible');
+            $('#ingreso').addClass('oculto');
+
+            $('#contador').removeClass('oculto');
+            $('#contador').addClass('visible');
         }
-        
+
     });
 
 
+    $('#Suma-PalitoEq1').click(function (e) {
+        e.preventDefault();
+        $('#bq2eq1').attr('src', '/resources/2.png');
+
+    });
 
 });

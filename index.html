@@ -15,105 +15,93 @@
 
 </head>
 
-<body id="contador">
+<body>
 
 
     <header>
         <h1>Anotador de truco</h1>
     </header>
 
-    <section id="ingreso" class="row content-center oculto">
-        <article id="equipos">
+    <section id="ingreso" class="oculto">
+        <div class="container content-center">
             <div>
-                <input id="eq1" class="input input-eq" type="text" placeholder="Equipo 1">
+                <input id="inputEq1" type="text" class="input" placeholder="Equipo 1">
             </div>
-            <div id="equipo2">
-                <input id="eq2" class="input input-eq" type="text" placeholder="Equipo 2">
-            </div>
-
-            <div id="aCuanto" class="">
-                <div class="col-1">
-                    <button id="a30" class="btn btn-a">A 30</button>
-                </div>
-
-                <div class="col-1">
-                    <button id="a24" class="btn btn-a">A 24</button>
-                </div>
+            <div>
+                <input id="inputEq2" type="text" class="input" placeholder="Equipo 2">
             </div>
 
             <div>
-                <button id="iniciar" class="btn btn-cont">Inciar</button>
+                <button id="a30" class="btn btn-a">A 30</button>
+                <button id="a24" class="btn btn-a">A 24</button>
             </div>
-        </article>
+
+            <button id="iniciar" class="input">Iniciar</button>
+        </div>
     </section>
 
     <section id="contador" class="visible">
-        <div class="row">
-            <div class="col-1">
-                <div id="eq1Name">
-                    <!-- Here print team one name -->
-                </div>
-                <div id="buenasEq1">
-                    <div id="bq1eq1">
-                        <img class="img-fosforos" src="/resources/0.png" alt="">
-                    </div>
-                    <div id="bq2eq1">
-                        <img class="img-fosforos" src="/resources/0.png" alt="">
-                    </div>
-                    <div id="bq3eq1">
-                        <img class="img-fosforos" src="/resources/0.png" alt="">
-                    </div>
-                </div>
-                <hr>
-                <div id="malasEq1">
-                    <div id="mq1eq1">
-                        <img class="img-fosforos" src="/resources/0.png" alt="">
-                    </div>
-                    <div id="mq2eq1">
-                        <img class="img-fosforos" src="/resources/0.png" alt="">
-                    </div>
-                    <div id="mq3eq1">
-                        <img class="img-fosforos" src="/resources/0.png" alt="">
-                    </div>
+        <div class="container">
+
+            <!-- Eq 1 -->
+            <div class="column">
+                <div class="row">
+                    <h1>Equipo 1</h1>
+                    <p><button id="addE1" class="btn btn-ops">+</button></p>
                 </div>
                 <div>
-                    <button class="btn" id="Suma-PalitoEq1">+</button>
+                    <!-- Buenas Equipo 1 -->
+                    <p><img src="./resources/0.png" alt="" id="e11" class="img-fosforos"></p>
+                    <p><img src="./resources/0.png" alt="" id="e12" class="img-fosforos"></p>
+                    <p><img src="./resources/0.png" alt="" id="e13" class="img-fosforos"></p>
+                </div>
+                <div>
+                    <!-- Malas Equipo 1 -->
+                    <p><img src="./resources/0.png" alt="" id="e14" class="img-fosforos"></p>
+                    <p><img src="./resources/0.png" alt="" id="e15" class="img-fosforos"></p>
+                    <p><img src="./resources/0.png" alt="" id="e16" class="img-fosforos"></p>
+                </div>
+                <div class="row">
+                    <button id="remainsE1" class="btn-ops btn">-</button>
+                    <button id="endE1" class="btn btn-op">End</button>
+                    <button id="Somethin" class="btn-ops btn">**</button>
                 </div>
             </div>
-            <div class="col-1">
-                <div id="eq2C">
-                    <!-- Here print team one name -->
+
+
+            <!-- Eq 2 -->
+            <div class="column">
+                <div class="row">
+                    <h1>Equipo 2</h1>
+                    <p><button id="addE2" class="btn btn-ops">+</button></p>
                 </div>
-                <div id="buenasEq2">
-                    <div  id="bq1eq2">
-                        <img class="img-fosforos" src="/resources/0.png" alt="">
-                    </div>
-                    <div id="bq2eq2">
-                        <img class="img-fosforos" src="/resources/0.png" alt="">
-                    </div>
-                    <div id="bq3eq2">
-                        <img class="img-fosforos" src="/resources/0.png" alt="">
-                    </div>
+                <div>
+                    <!-- Buenas Equipo 1 -->
+                    <p><img src="./resources/0.png" alt="" id="e21" class="img-fosforos"></p>
+                    <p><img src="./resources/0.png" alt="" id="e22" class="img-fosforos"></p>
+                    <p><img src="./resources/0.png" alt="" id="e23" class="img-fosforos"></p>
                 </div>
-                <hr>
-                <div id="malasEq2">
-                    <div id="eq2Name">
-                        <!-- Tema dos name -->
-                    </div>
-                    <div id="mq1eq2">
-                        <img class="img-fosforos" src="/resources/0.png" alt="">
-                    </div>
-                    <div id="mq2eq2">
-                        <img class="img-fosforos" src="/resources/0.png" alt="">
-                    </div>
-                    <div id="mq3eq2">
-                        <img class="img-fosforos" src="/resources/0.png" alt="">
-                    </div>
+                <div>
+                    <!-- Malas Equipo 1 -->
+                    <p><img src="./resources/0.png" alt="" id="e24" class="img-fosforos"></p>
+                    <p><img src="./resources/0.png" alt="" id="e25" class="img-fosforos"></p>
+                    <p><img src="./resources/0.png" alt="" id="me26" class="img-fosforos"></p>
+                </div>
+                <div class="row">
+                    <button id="remainsE2" class="btn-ops btn">-</button>
+                    <button id="endE2" class="btn btn-op">End</button>
+                    <button id="Somethin" class="btn-ops btn">**</button>
                 </div>
             </div>
-            </div>
+
+
+
+
+
         </div>
     </section>
+
+
 
 
 

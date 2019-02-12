@@ -3,7 +3,12 @@ console.log("Hola");
 var eq1 = 'Equipo 1';
 var eq2 = 'Equipo 2';
 
-var cantP = 0;
+var p1 = 0
+var p2 = 0
+var acump1 = 0
+var acump2 = 0
+
+var cantP = 30;
 
 
 
@@ -13,6 +18,8 @@ $(document).ready(function () {
         e.preventDefault();
         $('#a30').removeClass('btn');
         $('#a30').addClass('btn-select');
+        $('#a24').removeClass('btn-select');
+        $('#a24').addClass('btn');
         cantP = 30;
     });
 
@@ -20,6 +27,8 @@ $(document).ready(function () {
         e.preventDefault();
         $('#a24').removeClass('btn');
         $('#a24').addClass('btn-select');
+        $('#a30').removeClass('btn-select');
+        $('#a30').addClass('btn');
         cantP = 24
     });
 
@@ -32,7 +41,7 @@ $(document).ready(function () {
         }
 
         if ($('#eq2').val()) {
-            eq2 = $('#eq2').val()
+            eq2 = parseInt($('#eq2').val())
         }
 
         if (cantP == 0) {
@@ -49,15 +58,46 @@ $(document).ready(function () {
 
             $('#contador').removeClass('oculto');
             $('#contador').addClass('visible');
+
+            $('#Eq1Display').text(eq1);
+            $('#Eq2Display').text(eq2);
         }
 
     });
 
+    function printFosforos(p,e) {
+        console.log(p)
+        for (var i = 1; i <= 6; i++) {
+            if (p > 0) {
+                if (p >= 5) {
+                    $(`#e${e}${i}`).attr('src', './resources/5.png');
+                    p = p - 5;
+                } else {
+                    $(`#e${e}${i}`).attr('src', `./resources/${p}.png`);
+                    p = 0
+                }
+            }
+        }
+    }
 
-    $('#Suma-PalitoEq1').click(function (e) {
+    $('#addE1').click(function (e) {
         e.preventDefault();
-        $('#bq2eq1').attr('src', '/resources/2.png');
+        p1++
+        if (p1 > 0 && p1 <= cantP) {
+            printFosforos(p1, 1);
+        } else {
+            alert("Sucedio un error, (Estas tratando de sumar de mas.).");
+        }
+    });
 
+    $('#addE2').click(function (e) {
+        e.preventDefault();
+        p2++
+        if (p1 > 0 && p1 <= cantP) {
+            printFosforos(p2, 2);
+        } else {
+            alert("Sucedio un error, (Estas tratando de sumar de mas.).");
+        }
     });
 
 });

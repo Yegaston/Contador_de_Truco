@@ -23,7 +23,7 @@
     </header>
 
     <section id="ingreso" class="oculto">
-        <div class="container content-center">
+        <div class="contenedor content-center">
             <div>
                 <input id="inputEq1" type="text" class="input" placeholder="Equipo 1">
             </div>
@@ -41,63 +41,70 @@
     </section>
 
     <section id="contador" class="visible">
-        <div class="container">
+        <div class="">
 
-            <!-- Eq 1 -->
-            <div class="column">
+            <div class="row align-conts">
+                    <!-- Eq 1 -->
+                <div class="col">
+                    <div class="row">
+                        <p class="col"><button id="addE1" class="btn btn-ops">+</button></p>
+                        <h1 class="col">Equipo 1</h1>
+                    </div>
+                    <br>
+                    <div>
+                        <!-- Buenas Equipo 1 -->
+                        <p><img src="./resources/0.png" alt="" id="e11" class="img-fosforos"></p>
+                        <p><img src="./resources/0.png" alt="" id="e12" class="img-fosforos"></p>
+                        <p><img src="./resources/0.png" alt="" id="e13" class="img-fosforos"></p>
+                    </div>
+                    <hr>
+                    <div>
+                        <!-- Malas Equipo 1 -->
+                        <p><img src="./resources/0.png" alt="" id="e14" class="img-fosforos"></p>
+                        <p><img src="./resources/0.png" alt="" id="e15" class="img-fosforos"></p>
+                        <p><img src="./resources/0.png" alt="" id="e16" class="img-fosforos"></p>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button id="remainsE1" class="btn-ops btn">-</button>
+                            <button id="endE1" class="btn btn-op">End</button>
+                            <input id="CountInputE1" class="btn-ops btn">**</input>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Eq 2 -->
                 <div class="row">
-                    <h1>Equipo 1</h1>
-                    <p><button id="addE1" class="btn btn-ops">+</button></p>
+                    <div class="col">
+                        <h1>Equipo 2</h1>
+                        <p><button id="addE2" class="btn btn-ops">+</button></p>
+                    </div>
+                    <div>
+                        <!-- Buenas Equipo 1 -->
+                        <p><img src="./resources/0.png" alt="" id="e21" class="img-fosforos"></p>
+                        <p><img src="./resources/0.png" alt="" id="e22" class="img-fosforos"></p>
+                        <p><img src="./resources/0.png" alt="" id="e23" class="img-fosforos"></p>
+                    </div>
+                    <hr>
+                    <div>
+                        <!-- Malas Equipo 1 -->
+                        <p><img src="./resources/0.png" alt="" id="e24" class="img-fosforos"></p>
+                        <p><img src="./resources/0.png" alt="" id="e25" class="img-fosforos"></p>
+                        <p><img src="./resources/0.png" alt="" id="e26" class="img-fosforos"></p>
+                    </div>
+                    <div class="row">
+                        <button id="remainsE2" class="btn-ops btn">-</button>
+                        <button id="endE2" class="btn btn-op">End</button>
+                        <input id="CountInputE2" class="btn-ops btn"></input>
+                    </div>
                 </div>
-                <div>
-                    <!-- Buenas Equipo 1 -->
-                    <p><img src="./resources/0.png" alt="" id="e11" class="img-fosforos"></p>
-                    <p><img src="./resources/0.png" alt="" id="e12" class="img-fosforos"></p>
-                    <p><img src="./resources/0.png" alt="" id="e13" class="img-fosforos"></p>
-                </div>
-                <div>
-                    <!-- Malas Equipo 1 -->
-                    <p><img src="./resources/0.png" alt="" id="e14" class="img-fosforos"></p>
-                    <p><img src="./resources/0.png" alt="" id="e15" class="img-fosforos"></p>
-                    <p><img src="./resources/0.png" alt="" id="e16" class="img-fosforos"></p>
-                </div>
-                <div class="row">
-                    <button id="remainsE1" class="btn-ops btn">-</button>
-                    <button id="endE1" class="btn btn-op">End</button>
-                    <button id="Somethin" class="btn-ops btn">**</button>
-                </div>
+
+
+
+
+
             </div>
-
-
-            <!-- Eq 2 -->
-            <div class="column">
-                <div class="row">
-                    <h1>Equipo 2</h1>
-                    <p><button id="addE2" class="btn btn-ops">+</button></p>
-                </div>
-                <div>
-                    <!-- Buenas Equipo 1 -->
-                    <p><img src="./resources/0.png" alt="" id="e21" class="img-fosforos"></p>
-                    <p><img src="./resources/0.png" alt="" id="e22" class="img-fosforos"></p>
-                    <p><img src="./resources/0.png" alt="" id="e23" class="img-fosforos"></p>
-                </div>
-                <div>
-                    <!-- Malas Equipo 1 -->
-                    <p><img src="./resources/0.png" alt="" id="e24" class="img-fosforos"></p>
-                    <p><img src="./resources/0.png" alt="" id="e25" class="img-fosforos"></p>
-                    <p><img src="./resources/0.png" alt="" id="me26" class="img-fosforos"></p>
-                </div>
-                <div class="row">
-                    <button id="remainsE2" class="btn-ops btn">-</button>
-                    <button id="endE2" class="btn btn-op">End</button>
-                    <button id="Somethin" class="btn-ops btn">**</button>
-                </div>
-            </div>
-
-
-
-
-
         </div>
     </section>
 
@@ -106,8 +113,8 @@
 
 
     <script src="./js/app.js" type="module"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </body>
 
 </html>

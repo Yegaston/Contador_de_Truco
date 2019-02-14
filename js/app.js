@@ -8,11 +8,86 @@ var p2 = 0
 var acump1 = 0
 var acump2 = 0
 
-var cantP = 30;
+var cantP = 24;
 
 
 
 $(document).ready(function () {
+
+    class Counter {
+        constructor() {
+
+        }
+
+        End() {
+            console.log(p1, p2)
+            console.log("Restarting game");
+            if (p1 != cantP && p2 != cantP) {
+                if (p1 > p2) {
+                    alert(`Ha ganado el ${eq1}`)
+                } else if (p2 > p1) {
+                    alert(`Ha ganado el ${eq2}`)
+                } else {
+                    alert("Empate");
+                }
+
+            }
+
+
+            for (var i = 1; i <= 6; i++) {
+                for (var j = 1; j <= 2; j++) {
+                    $(`#e${j}${i}`).attr('src', './resources/0.png');
+                }
+            }
+
+            eq1 = 'Equipo 1';
+            eq2 = 'Equipo 2';
+            p1 = 0
+            p2 = 0
+            acump1 = 0
+            acump2 = 0
+            cantP = 0;
+
+            $('#ingreso').removeClass('oculto');
+            $('#ingreso').addClass('visible');
+
+            $('#contador').removeClass('visible');
+            $('#contador').addClass('oculto');
+
+
+        }
+
+        printFosforos(p, e) {
+            console.log(p)
+            if (cantP === 30) {
+                for (var i = 1; i <= 6; i++) {
+                    if (p >= 0) {
+                        if (p >= 5) {
+                            $(`#e${e}${i}`).attr('src', './resources/5.png');
+                            p = p - 5;
+                        } else {
+                            $(`#e${e}${i}`).attr('src', `./resources/${p}.png`);
+                            p = 0
+                        }
+                    }
+                }
+            } else {
+                for (var i = 1; i <= 6; i++) {
+                    if (p >= 0) {
+                        if (p >= 5) {
+                            $(`#e${e}${i}`).attr('src', './resources/5.png');
+                            p = p - 5;
+                        } else {
+                            $(`#e${e}${i}`).attr('src', `./resources/${p}.png`);
+                            p = 0
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    const counter = new Counter();
 
     $('#a30').click(function (e) {
         e.preventDefault();
@@ -65,35 +140,25 @@ $(document).ready(function () {
 
     });
 
-    function printFosforos(p,e) {
-        console.log(p)
-        for (var i = 1; i <= 6; i++) {
-            if (p >= 0) {
-                if (p >= 5) {
-                    $(`#e${e}${i}`).attr('src', './resources/5.png');
-                    p = p - 5;
-                } else {
-                    $(`#e${e}${i}`).attr('src', `./resources/${p}.png`);
-                    p = 0
-                }
-            }
-        }
-    }
+
 
     $('#addE1').click(function (e) {
         e.preventDefault();
         p1++
+        $('#CountInputE1').val(p1);
         if (p1 > 0 && p1 <= cantP) {
-            printFosforos(p1, 1);
+            counter.printFosforos(p1, 1);
         } else {
-            alert("Sucedio un error, (Estas tratando de sumar de mas.).");
+            alert(`Ha ganado el ${eq1}`);
+            counter.End();
         }
     });
     $('#remainsE1').click(function (e) {
         e.preventDefault();
         p1--
+        $('#CountInputE1').val(p1);
         if (p1 >= 0 && p1 <= cantP) {
-            printFosforos(p1, 1);
+            counter.printFosforos(p1, 1);
         } else {
             alert("Sucedio un error, (Estas tratando restar de mas.).");
         }
@@ -102,23 +167,34 @@ $(document).ready(function () {
     $('#addE2').click(function (e) {
         e.preventDefault();
         p2++
+
+        $('#CountInputE2').val(p2);
+
         if (p2 > 0 && p2 <= cantP) {
-            printFosforos(p2, 2);
+            counter.printFosforos(p2, 2);
         } else {
             alert("Sucedio un error, (Estas tratando de sumar de mas.).");
+            alert(`Ha ganado el ${eq2}`);
+            counter.End();
         }
     });
 
     $('#remainsE2').click(function (e) {
         e.preventDefault();
         p2--
+        $('#CountInputE2').val(p2);
         if (p2 > 0 && p2 <= cantP) {
-            printFosforos(p2, 2);
+            counter.printFosforos(p2, 2);
         } else {
             alert("Sucedio un error, (Estas tratando de sumar de mas.).");
         }
     });
 
-   
+    $('#endE1').click(function (e) {
+        e.preventDefault();
+        counter.End(1)
+
+    });
+
 
 });

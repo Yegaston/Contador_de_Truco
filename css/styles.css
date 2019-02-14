@@ -25,17 +25,12 @@ header {
     padding: 5vw;
 }
 
-.container {
+.contenedor {
     display: flex;
     flex-direction: column;
 }
 
-.row {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-  }
+
   
   .column {
     flex-direction: column;
@@ -45,9 +40,9 @@ header {
     height: 100%;
   }
 
-/* .align-conts{
-    justify-content: ;
-} */
+.align-conts{
+    justify-content: center ;
+}
 
 .content-center {
     justify-content: center;
